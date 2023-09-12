@@ -47,3 +47,12 @@ variable "windows_admin_password" {
   description = "This variable defines the Windows admin password k8s Worker nodes"  
 }
 
+variable "service_principal_client_id" {
+  type = string
+  default = "Client ID"
+}
+
+variable "service_principal_client_secret" {
+  type = string
+  default = "Client Secret"
+}
