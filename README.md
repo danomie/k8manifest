@@ -12,7 +12,7 @@ az ad sp create-for-rbac --name <Service Account Name> --role Contributor --scop
 
 ### Add following environment variables to run Terraform
 
-Client ID will be appID and Client Secret will be provided as an output of above command. Take the values from above and add below and create the environment variables  
+Client ID will be `appID` and Client Secret will be `password` provided as an output of above command. Take the values from above and add below and create the environment variables  
 
 ```
 export ARM_SUBSCRIPTION_ID="5135fe87-f70d-43dc-a7d5-ed71c8db7cac"
