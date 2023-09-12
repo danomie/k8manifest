@@ -1,5 +1,7 @@
 # Instructions to deploy AKS Cluster
 
+*NOTE* - `It's recommended to create a new service account and add required permissions to it in order to proceed with further steps`
+
 ### Create a Service Principal first which will be used to run Terraform 
 
 `az ad sp create-for-rbac --name <Service Account Name> --role Contributor --scopes /subscriptions/5135fe87-f70d-43dc-a7d5-ed71c8db7cac`
