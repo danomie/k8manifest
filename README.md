@@ -25,7 +25,7 @@ export TF_VAR_service_principal_client_secret="password"
 
 ### Add Azure AD permissions to the Service Principal 
 
-- `Go to Azure Active Directory --> App Registrations --> <Service Account>`
+- `Go to Azure Active Directory --> App Registrations --> <Service Principal>`
 - `Go to API permissions and click Add a permission`
 - `Under Microsoft APIs, choose Microsoft Graph`
 - `Under Microsoft Graph, choose Application permissions`
