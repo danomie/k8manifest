@@ -2,7 +2,7 @@
 
 ### Create a Service Principal first which will be used to run Terraform 
 
-`az ad sp create-for-rbac --name aks_testing --role Contributor --scopes /subscriptions/5135fe87-f70d-43dc-a7d5-ed71c8db7cac`
+`az ad sp create-for-rbac --name <Service Account Name> --role Contributor --scopes /subscriptions/5135fe87-f70d-43dc-a7d5-ed71c8db7cac`
 
 ### Add following environment variables to run Terraform
 
