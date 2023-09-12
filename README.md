@@ -56,8 +56,8 @@ sudo terraform apply -var service_principal_client_id="paste value of ID here " 
 ### Connect to AKS Cluster
 
 Depending on your operating environment, you may need to first...
-install kubelogin on ubuntu
-sudo snap install kubelogin
+- `install kubelogin on ubuntu
+- `sudo snap install kubelogin
 
 Then, run following commands
 
