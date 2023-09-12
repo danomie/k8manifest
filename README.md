@@ -12,15 +12,15 @@ az ad sp create-for-rbac --name <Service Account Name> --role Contributor --scop
 
 ### Add following environment variables to run Terraform
 
-Client ID will be `appID` and Client Secret will be `password` provided as an output of above command. Take the values from above and add below and create the environment variables  
+Client ID will be `appId` and Client Secret will be `password` provided as an output of above command. Take the values from above and add below and create the environment variables  
 
 ```
 export ARM_SUBSCRIPTION_ID="5135fe87-f70d-43dc-a7d5-ed71c8db7cac"
 export ARM_TENANT_ID="6f938018-ad23-46d8-ba0b-9a42b6a62129"
-export ARM_CLIENT_ID=""
-export ARM_CLIENT_SECRET=""
-export TF_VAR_service_principal_client_id=""
-export TF_VAR_service_principal_client_secret=""
+export ARM_CLIENT_ID="appId"
+export ARM_CLIENT_SECRET="password"
+export TF_VAR_service_principal_client_id="appId"
+export TF_VAR_service_principal_client_secret="password"
 ```
 
 ### Add Azure AD permissions to the Service Principal 
