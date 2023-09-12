@@ -15,12 +15,15 @@ az ad sp create-for-rbac --name <Service Account Name> --role Contributor --scop
 Client ID will be `appId` and Client Secret will be `password` provided as an output of above command. Take the values from above and add below and create the environment variables  
 
 ```
+
+### Declare your environment variables as below
 export ARM_SUBSCRIPTION_ID="5135fe87-f70d-43dc-a7d5-ed71c8db7cac"
-export ARM_TENANT_ID="6f938018-ad23-46d8-ba0b-9a42b6a62129"
-export ARM_CLIENT_ID="appId"
-export ARM_CLIENT_SECRET="password"
-export TF_VAR_service_principal_client_id="appId"
-export TF_VAR_service_principal_client_secret="password"
+export ARM_TENANT_ID="replace this text with "tenant" from above"
+export ARM_CLIENT_ID="replace this text with password from above"
+export ARM_CLIENT_SECRET="replace this text with password from above"
+export TF_VAR_service_principal_client_id="replace this text with appIDfrom above"
+export TF_VAR_service_principal_client_secret="replace this text with password from above"
+
 ```
 
 ### Add Azure AD permissions to the Service Principal 
@@ -38,6 +41,9 @@ Run following commands one by one to execute terraform
 ```
 terraform init
 terraform plan
+
+sudo terraform apply -var service_principal_client_id="paste value of ID here " -var service_principal_client_secret="paste value of password here"
+
 terraform apply 
 ```
 
@@ -49,7 +55,11 @@ terraform apply
 
 ### Connect to AKS Cluster
 
-Run following commands
+Depending on your operating environment, you may need to first...
+install kubelogin on ubuntu
+sudo snap install kubelogin
+
+Then, run following commands
 
 ```
 az account set --subscription 5135fe87-f70d-43dc-a7d5-ed71c8db7cac
@@ -77,3 +87,4 @@ kubectl get ns
 - `To access demo application from browser, go to network resource group terraform-aks-dev-nrg and look out for a Public IP Address type resource starting with kubernetes-*`
 - `Within the Public IP address kubernetes-*, go to configuration option and add a unique name under DNS name label (optional)`
 - `Save the changes and access your application through your browser`
+
