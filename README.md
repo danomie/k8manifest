@@ -41,10 +41,10 @@ Run following commands one by one to execute terraform
 ```
 terraform init
 terraform plan
-
+terraform apply
+OR
 sudo terraform apply -var service_principal_client_id="paste value of ID here " -var service_principal_client_secret="paste value of password here"
 
-terraform apply 
 ```
 
 ### Once AKS cluster is up and running, add Cluster Admin permissions to your user
