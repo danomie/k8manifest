@@ -36,8 +36,6 @@ export TF_VAR_service_principal_client_secret="replace this text with password f
 
 ### Run Terraform 
 
-Run following commands one by one to execute terraform 
-
 ```
 terraform init
 terraform plan
@@ -56,14 +54,15 @@ sudo terraform apply -var service_principal_client_id="paste value of ID here " 
 ### Connect to AKS Cluster
 
 Depending on your operating environment, you may need to first...
-- `install kubelogin on ubuntu
-- `sudo snap install kubelogin
+- `install kubelogin on ubuntu`
+- `sudo snap install kubelogin`
 
 Then, run following commands
 
 ```
 az account set --subscription 5135fe87-f70d-43dc-a7d5-ed71c8db7cac
 az aks get-credentials --resource-group terraform-aks-dev --name terraform-aks-dev-cluster
+kubelogin convert-kubeconfig -l azurecli
 kubectl get ns
 ```
 
