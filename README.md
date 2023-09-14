@@ -60,6 +60,8 @@ Depending on your operating environment, you may need to first...
 Then, run following commands
 
 ```
+az logout
+az login
 az account set --subscription 5135fe87-f70d-43dc-a7d5-ed71c8db7cac
 az aks get-credentials --resource-group terraform-aks-dev --name terraform-aks-dev-cluster
 kubelogin convert-kubeconfig -l azurecli
