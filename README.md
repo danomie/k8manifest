@@ -51,6 +51,11 @@ sudo terraform apply -var service_principal_client_id="paste value of ID here " 
 - `Add role assignment to your Azure AD user`
 - `Add following roles - Azure Kubernetes Service Cluster Admin Role, Azure Kubernetes Service RBAC Cluster Admin`
 
+### Once AKS cluster is up and running, add users in AKS Cluster Admin AD Group
+
+- `Go to Azure Active Directory --> Groups --> terraform-aks-dev-cluster-administrators`
+- `Add your user in Members list`
+
 ### Connect to AKS Cluster
 
 Depending on your operating environment, you may need to first...
